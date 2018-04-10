@@ -22,11 +22,11 @@ namespace ConsoleApp1
                 Console.WriteLine("*************               Menu                      *************");
                 Console.WriteLine("*******************************************************************");
                 Console.WriteLine("*****                                                         *****");
-                Console.WriteLine("*****        Option: 1 (Add item)                            *****");
-                Console.WriteLine("*****        Option: 2 (delete item)                           *****");
-                Console.WriteLine("*****        Option: 3 (show the number of items in queue)     *****");
-                Console.WriteLine("*****        Option: 4 (find an item)                          *****");
-                Console.WriteLine("*****        Option: 5 (Display all of the items in the queue)  *****");
+                Console.WriteLine("*****        Option: 1 (PrintQueue )                            *****");
+                Console.WriteLine("*****        Option: 2 (Enqueue )                              *****");
+                Console.WriteLine("*****        Option: 3 (Dequeue )                                *****");
+                Console.WriteLine("*****        Option: 4 (Contains )                               *****");
+                Console.WriteLine("*****        Option: 5 (ToArray )                               *****");
                 Console.WriteLine("*****        options: 6 (exit)                                *****");
                 Console.WriteLine("*******************************************************************");
                 Console.WriteLine();
@@ -94,12 +94,10 @@ namespace ConsoleApp1
 
         public static void program1()
         {
-            Queue q = new Queue();
-            q.Enqueue('A');
-            q.Enqueue('M');
-            q.Enqueue('G');
-            q.Enqueue('W');
             Console.WriteLine("Current queue: ");
+            foreach (char c in q) Console.Write(c + " ");
+            Console.WriteLine();
+           
 
         }
         public static void program2()
@@ -113,9 +111,13 @@ namespace ConsoleApp1
 
         public static void program3()
         {
+            Queue q = new Queue();
+            q.Enqueue('A');
+            q.Enqueue('M');
+            q.Enqueue('G');
+            q.Enqueue('W');
             Console.WriteLine("Current queue: ");
-            foreach (char c in q) Console.Write(c + " ");
-            Console.WriteLine();
+
 
         }
         public static void program4()
